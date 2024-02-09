@@ -161,7 +161,7 @@ p{
         height: 15vh;
     }
 
-        #yes:hover, #no:hover{
+     #yes:hover, #yes:active, #no:hover, #no:active{
         background-color: #fa3317;
     }
 }
