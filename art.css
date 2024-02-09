@@ -1,0 +1,160 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.08em;
+    margin: 0;
+    color: whitesmoke;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: auto;
+    background: linear-gradient(45deg ,#dc51f5, #a51dbd, #944af0, #c5a0f2);
+    background-size: 300% 300%;
+    animation: animatedBackground 18s ease-in-out infinite;
+}
+
+.text, #smallScreen{
+    height: auto;
+    position: static;
+    width: 60vw;
+    margin: auto;
+    padding: 1.5%;
+    padding-top: 5%;
+    display: block;
+    text-align: center;
+}
+
+#smallScreen{
+    display: none;
+    padding: 0;
+    text-align: center;
+}
+
+#smallScreen > p{
+    
+    display: none;
+    width: inherit;
+    transition: opacity 1.95s ease;
+}
+
+p{
+    display: none;
+    opacity: 0;
+    transition: opacity 1.55s ease;
+}
+
+.button-container{
+    position: relative;
+    height: auto;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#clicker{
+    background-color: #fa3317;
+    padding: 0.4% 0.9% 0.4% 0.9%;
+    border: 0;
+    border-radius: 11%;
+    box-shadow: 0 0 5px gray;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#clicker:hover, #yes:hover, #no:hover{
+    background-color: #de1f04;
+    cursor: pointer;
+}
+
+#yes, #no{
+    display: inline;
+    background-color: #fa3317;
+    padding: 0.4% 0.9% 0.4% 0.9%;
+    margin: 20px;
+    border: none;
+    border-radius: 11%;
+    box-shadow: 0 0 5px gray;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#container{
+    height: auto;
+    width: 100vw;
+    margin-top: 30vh;
+    display: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container > h2{
+    padding-bottom: 5vh;
+}
+
+.grid-container{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: auto auto;
+    column-gap: 5vw;
+    width: auto;
+    margin: auto; 
+}
+
+.grid-item{
+    height: 20vh;
+}
+
+@keyframes animatedBackground {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{   
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    
+    *{
+        font-size: 1.2rem;
+    }
+    
+    #smallScreen{
+        display: block;
+        margin-top: 30vh;
+    }
+
+    .text{
+        display: none;
+    }
+
+    #smallScreen > p{
+        position: relative;
+    }
+
+    #ps6{
+        margin-top: 40vh;
+    }
+
+    .button-container{
+        margin-top: 4%;
+    }
+
+    h2{
+        font-size: 1.1rem;
+    }
+
+    .grid-item{
+        height: 15vh;
+    }
+
+}
