@@ -110,6 +110,10 @@ p{
     height: 20vh;
 }
 
+:focus{
+    outline: none;
+}
+
 @keyframes animatedBackground {
     0%{
         background-position: 0 50%;
@@ -157,4 +161,7 @@ p{
         height: 15vh;
     }
 
+        #yes:hover, #no:hover{
+        background-color: #fa3317;
+    }
 }
